@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quartz,Granite,Porcelain,Quartzite and Marble Countertops in San Diego County | Ponce Countertops Inc</title>
+    <link rel="stylesheet" href="css/style.css">
+<link rel="preload" as="image" href="images/background.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+<meta name="description" content="Custom countertops for kitchens, bathrooms, fireplaces, and outdoor spaces serving all of San Diego County. Free estimates and expert installation." />
+<meta name="robots" content="index, follow">
+<meta name="author" content="Ponce Countertops Inc">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class ="nav-container">
+            <!--logo -->
+            <a href = "index.html" class = "logo">
+<img src="images/Logo.png" alt="Ponce Countertops Logo" loading="lazy">            </a>
+            
+            <!--right side, links and call btn-->
+            <div class = "nav-right">
+
+                <ul class = "nav-links">
+                    <li><a class="active" href="index.html"> About </a></li>
+                    <li><a href = "services.html"> Services </a></li>
+
+                 <li class = "dropdown">
+                    <a href = "gallery.html"> Gallery  </a>
+                    <ul class = "dropdown-menu">
+                        <li><a href="gallery.html#kitchens" >Kitchens </a> </li>
+                        <li><a href="gallery.html#bathrooms" >Bathrooms </a> </li>
+                        <li><a href="gallery.html#fireplaces" >Fireplaces </a> </li>
+                        <li><a href="gallery.html#outdoors" > Outdoors </a> </li>
+                    </ul>
+                 </li>
+
+                 <li><a href="reviews.html" >Reviews </a> </li>
+                 <li><a href="contact.html" class="nav-btn">Contact</a></li>
+
+                 
+                </ul>
+
+        
+
+        </div>
+                <a href = "tel:6192881476" class ="call-btn">
+                    📞 (619) 288-1476
+                  </a>
+                <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+
+        
+        <!--mobile toggle menu-->
+        </div>
+    </nav>
+
+    
+    
+    
+
+    
+    
+    <!-- HERO Section, what will make clients choose you, custom the button in css file .hero-btn -->
+    <section class = "hero hero-home" style="background-image:url('images/background.jpg');">
+     <div class="hero-content fade-in">
+        <h1> 
+            Custom Countertops Serving All of San Diego County
+        </h1>
+        <p>Welcome to Ponce Countertops Inc </p>
+        <p class = "trust-badge"> ✓ Licensed & Insured • Family Owned • Free Estimates</p>
+        <a href = "contact.html" class ="btn"> Get a Free Estimate</a>
+      </div>    
+    </section>
+
+    <!--About section -->
+    <section class ="about-section fade-in">
+        <div class ="about-container">
+            <div class ="about-text">
+                <h2>About Ponce Countertops Inc</h2>
+                <p>
+                    Ponce Countertops Inc, A family-owned business, with years of experience, is dedicated to delivering high-quality countertop solutions for kitchens, bathrooms, fireplaces, and outdoor spaces.
+                </p>
+                <p>
+                    With years of hands-on experience, we pride ourselves on precision,
+                    craftsmanship, and customer satisfaction. Every project is completed
+                    with care, from start to finish.
+                </p>
+
+                <div class ="about-info">
+                    <p><strong>Established:</strong> 2018</p>
+                    <p><strong>Owner:</strong> Martin Ponce</p>
+                    <p><strong>Licensed & Insured </strong></p>
+                    <p><strong>License Number:</strong> 1059554</p>
+                </div>
+            </div>
+
+            <div class="about-image">
+                <img src="images/background.jpg" alt="Ponce Countertops craftsmanship" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <section class="stats-section fade-in">
+  <div class="stats-container">
+    
+    <div class="stat">
+        <span class="stat-icon">🛠️</span>
+      <h3>20+</h3>
+      <p>Years of Experience</p>
+    </div>
+
+    <div class="stat">
+        <span class="stat-icon">🏡</span>
+      <h3>1,000+</h3>
+      <p>Projects Completed</p>
+    </div>
+
+    <div class="stat">
+        <span class="stat-icon">⭐</span>
+      <h3>100%</h3>
+      <p>Customer Satisfaction</p>
+    </div>
+
+  </div>
+</section>
+
+    <section class="cta-section fade-in">
+  <h2>Ready to Start Your Project?</h2>
+  <p>Contact us today for a free consultation and estimate.</p>
+  <a href="contact.html" class="btn">Contact Us</a>
+</section>
+
+
+    <script>
+    /*document.querySelector(".menu-toggle")
+      .addEventListener("click", () => {
+        document.querySelector(".nav-links")
+          .classList.toggle("open");
+      });*/
+      const menuToggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+
+if (menuToggle && navLinks) {
+  menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("open");
+  });
+}
+
+        const faders = document.querySelectorAll(".fade-in");
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
+    });
+  }, { threshold: 0.2 });
+
+  faders.forEach(el => observer.observe(el));
+
+  </script>
+
+    
+
+  <!-- FOOTER START -->
+  <footer class="site-footer">
+    <div class="footer-container">
+
+      <div class="footer-section">
+        <h4>Ponce Countertops Inc</h4>
+        <p>
+          Custom countertops in Granite, Quartz & Marble<br>
+          Licensed & Insured • Serving All of San Diego County<br>
+          📞 <a href="tel:+16192881476">(619) 288-1476 </a>
+        </p>
+      </div>
+
+      <div class="footer-section">
+        <h4>Our Services</h4>
+        <ul>
+          <li><a href="services.html">Kitchen & Bathroom Countertops</a></li>
+  <li><a href="services.html">Quartz, Granite & Marble</a></li>
+  <li><a href="services.html">Outdoor & Commercial Work</a></li>
+  <li><a href="services.html">Fireplaces & Custom Projects</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Service Areas</h4>
+        <p>
+          Serving all of San Diego County</p>
+          </div>
+
+      <div class="footer-section">
+        <h4>Trusted Local Countertop Experts</h4>
+        <p>⭐ 5-star rated countertop installation in San Diego County</p>
+<a href="reviews.html">Read Reviews</a>
+<a href="contact.html" class="footer-btn">Get a Free Estimate</a>
+
+</div>
+        
+</div>
+    <div class="footer-bottom">
+      <p>© 2026 Ponce Countertops Inc. All Rights Reserved.</p>
+    </div>
+  </footer>
+  <!-- FOOTER END -->
+
+
+<div class="mobile-sticky-bar">
+  <a href="tel:+16192881476" class="sticky-call">📞 Call</a>
+  <a href="contact.html" class="sticky-quote">Free Quote</a>
+</div>
+
+
+
+</body>
+</html>

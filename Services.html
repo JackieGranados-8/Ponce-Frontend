@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name = "viewport" content = "width=device-width, initial-scale = 1.0">
+    <title>Countertop Services in San Diego County | Quartz, Quartzite & More</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+<meta name="description" content="Professional countertop services including granite, quartz,quartzite, marble, porcelain and custom installations throughout San Diego County." />
+<meta name="robots" content="index, follow">
+<meta name="author" content="Ponce Countertops Inc">
+<link rel="preload" as="image" href="images/background.jpg">
+</head>
+
+<body>
+   <nav class="navbar">
+        <div class ="nav-container">
+      
+            <a href="index.html" class="logo">
+           <img src="images/Logo.png" alt="Ponce Countertops Inc logo" loading="lazy"> </a>
+
+        <div class ="nav-right">
+          <ul class = "nav-links">
+            <li><a  href="index.html"> About </a></li>
+            <li><a class="active" href = "services.html"> Services </a></li>
+
+            <li class = "dropdown">
+                <a href = "gallery.html"> Gallery  </a>
+                <ul class = "dropdown-menu">
+                    <li><a href="gallery.html#kitchens" >Kitchens </a> </li>
+                    <li><a href="gallery.html#bathrooms" >Bathrooms </a> </li>
+                    <li><a href="gallery.html#Fireplaces" >Fireplaces </a> </li>
+                    <li><a href="gallery.html#outdoors" > Outdoors </a> </li>
+                </ul>
+            </li>
+
+            <li><a href="reviews.html" >Reviews </a> </li>
+            <li><a  href="contact.html" class="nav-btn">Contact</a></li>
+
+            
+        </ul>
+
+        
+        </div>
+        
+
+                    <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+                    <a href = "tel:+16192881476" class ="call-btn">
+                    📞 (619) 288-1476
+                  </a>
+        </div>
+    </nav>
+
+<section class = "hero hero-services" style="background-image:url('images/background.jpg');">
+    <div class="hero-content fade-in">
+        <span class ="hero-eyebrow"> Residential & Commercial</span>
+        <h1> Expert Countertop<br>Fabrication & Installation</h1>
+        <p>
+            Precision-crafted countertops using quartzite, granite, marble,
+      quartz, and porcelain — custom or prefabricated, installed with care.
+        </p>
+
+        <div class = "hero-actions">
+            <a href="contact.html" class="btn">Get a Free Quote</a>
+      <a href="gallery.html" class="btn btn-outline">View Our Work</a>
+        </div>
+    </div>
+</section>
+
+<section class="materials-strip ">
+  <div class="materials-container">
+    <span>Quartzite</span>
+    <span>Granite</span>
+    <span>Marble</span>
+    <span>Quartz</span>
+    <span>Porcelain</span>
+  </div>
+</section>
+
+<section class="services-section fade-in">
+  <div class="services-container">
+    <h2>What We Offer</h2>
+
+    <div class="services-grid">
+      <!-- Residential Services -->
+      <div class="service-card">
+        <h3>Residential Services</h3>
+        <ul>
+          <li>Kitchen Countertops</li>
+          <li>Bathroom Vanities</li>
+          <li>Shower Walls</li>
+          <li>Fireplaces</li>
+          <li>Outdoor BBQ's</li>
+          <li>Custom or Prefabricated</li>
+  
+
+          <li>Materials: Quartzite, Granite, Marble, Quartz, Porcelain</li>
+        </ul>
+      </div>
+
+      <!-- Commercial Services -->
+      <div class="service-card">
+        <h3>Commercial Services</h3>
+        <ul>
+          <li>Restaurants and offices</li>
+          <li>Fabrication & Installation</li>
+          <li>Custom or Prefabricated</li>
+          <li>Materials: Quartzite, Granite, Marble, Quartz, Porcelain</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+<script>
+    const menuToggle = document.querySelector(".menu-toggle");
+  const navLinks = document.querySelector(".nav-links");
+
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("open");
+    });
+  }
+
+  const faders = document.querySelectorAll('.fade-in');
+
+  const appearOnScroll = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+
+  faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+  });
+  </script>
+
+
+
+<!-- FOOTER START -->
+  <footer class="site-footer">
+    <div class="footer-container">
+
+      <div class="footer-section">
+        <h4>Ponce Countertops Inc</h4>
+        <p>
+          Custom countertops in Granite, Quartz & Marble<br>
+          Licensed & Insured • Serving All of San Diego County<br>
+          📞 <a href="tel:+16192881476">(619) 288-1476 </a>
+        </p>
+      </div>
+
+      <div class="footer-section">
+        <h4>Our Services</h4>
+        <ul>
+          <li><a href="services.html">Kitchen & Bathroom Countertops</a></li>
+  <li><a href="services.html">Quartz, Granite & Marble</a></li>
+  <li><a href="services.html">Outdoor & Commercial Work</a></li>
+  <li><a href="services.html">Fireplaces & Custom Projects</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Service Areas</h4>
+        <p>
+          Serving all of San Diego County</p>
+          </div>
+
+      <div class="footer-section">
+        <h4>Trusted Local Countertop Experts</h4>
+        <p>⭐ 5-star rated countertop installation in San Diego County</p>
+<a href="reviews.html">Read Reviews</a>
+<a href="contact.html" class="footer-btn">Get a Free Estimate</a>
+
+</div>
+        
+</div>
+    <div class="footer-bottom">
+      <p>© 2026 Ponce Countertops Inc. All Rights Reserved.</p>
+    </div>
+  </footer>
+  <!-- FOOTER END -->
+
+
+<div class="mobile-sticky-bar">
+  <a href="tel:+6192881476" class="sticky-call">📞 Call</a>
+  <a href="contact.html" class="sticky-quote">Free Quote</a>
+</div>
+
+
+</body>
+</html>
+
+
+          

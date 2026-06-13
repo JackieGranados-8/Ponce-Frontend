@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Review Approval</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="admin">
+  <h2>Pending Reviews</h2>
+  <div id="reviews"></div>
+
+<script>
+
+const ADMIN_PASSWORD = prompt("Enter admin password:");
+
+if (!ADMIN_PASSWORD) {
+    document.body.innerHTML = "<h3>Access denied</h3>";
+}
+
+async function loadPendingReviews() {
+    try {
+        const res = await fetch("https://ponce-backend.onrender.com/api/reviews/pending", {
+            headers: {
+                "x-admin-password": ADMIN_PASSWORD
+            }
+        });
+
+        const text = await res.text();
+        if (!res.ok) {
+            console.error("Server error:",text)
+            alert(text);
+            return;
+        }
+
+        const reviews = JSON.parse(text);
+
+        const container = document.getElementById("reviews");
+        container.innerHTML = "";
+
+        if (reviews.length === 0) {
+            container.innerHTML = "<p>No pending reviews</p>";
+            return;
+        }
+
+        reviews.forEach(r => {
+            const div = document.createElement("div");
+            div.className = "review";
+
+            div.innerHTML = `
+                <p><strong>${r.name}</strong> (${r.rating}/5)</p>
+                <p>${r.message}</p>
+                <button onclick="approveReview('${r._id}')">Approve</button>
+                <button onclick="deleteReview('${r._id}')" style="background:red;">Delete</button>
+                <hr/>
+            `;
+
+            container.appendChild(div);
+        });
+
+    } catch (err) {
+        console.error(err);
+        alert("Server error");
+    }
+}
+
+async function approveReview(id) {
+    if (!confirm("Approve this review?")) return;
+
+    await fetch(`https://ponce-backend.onrender.com/api/reviews/${id}/approve`, {
+        method: "PATCH",
+        headers: {
+            "x-admin-password": ADMIN_PASSWORD
+        }
+    });
+
+    loadPendingReviews();
+}
+
+async function deleteReview(id) {
+    if (!confirm("Delete this review?")) return;
+
+    await fetch(`https://ponce-backend.onrender.com/api/reviews/${id}`, {
+        method: "DELETE",
+        headers: {
+            "x-admin-password": ADMIN_PASSWORD
+        }
+    });
+
+    loadPendingReviews();
+}
+
+window.onload = loadPendingReviews;
+
+</script>
+
+</body>
+</html>
