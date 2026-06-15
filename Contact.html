@@ -168,10 +168,7 @@
     <section class="contact-location">
 
   <div id="map"></div>
-  <a id="directionsBtn" class="btn directions" target="_blank">
-  📍 Get Directions
-</a>
-
+  
   <div class="info-card">
     <h2>Ponce Countertops</h2>
 
@@ -200,13 +197,14 @@
     <div class="buttons">
       <a href="tel:+16192881476" class="btn call">Call Now</a>
 
-      <a
-        href="https://www.google.com/maps/place/Ponce+Countertops+Inc"
-        target="_blank"
-        class="btn directions"
-      >
-        Get Directions
-      </a>
+     <a
+      id="infoDirectionsBtn"
+      href="#"
+      target="_blank"
+      class="btn directions"
+>
+  📍 Get Directions
+</a>
     </div>
 
   </div>
@@ -329,6 +327,12 @@ function initMap() {
     ? `https://maps.apple.com/?daddr=${coords.lat},${coords.lng}`
     : `https://www.google.com/maps/dir/?api=1&destination=${coords.lat},${coords.lng}`;
 
+    const infoBtn = document.getElementById("infoDirectionsBtn");
+
+    if (infoBtn) {
+    infoBtn.href = directionsUrl;
+}
+
   const infoWindow = new google.maps.InfoWindow({
     content: `
       <div style="font-size:14px; line-height:1.5;">
@@ -354,11 +358,7 @@ function initMap() {
     infoWindow.open(map, marker);
   });
 
-  const btn = document.getElementById("directionsBtn");
-
-if (btn) {
-  btn.href = directionsUrl;
-}
+  
 }
     </script>
     
